@@ -3,12 +3,13 @@
 namespace Finite\Factory;
 
 use Finite\Exception\FactoryException;
+use Finite\StateMachine\StateMachineInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * A concrete implementation of State Machine Factory using the sf2 DIC.
  *
- * @author Yohan Giarelli <yohan@frequence-web.fr>
+ * @author Yohan Giarelli <yohan@giarel.li>
  */
 class SymfonyDependencyInjectionFactory extends AbstractFactory
 {
@@ -44,7 +45,7 @@ class SymfonyDependencyInjectionFactory extends AbstractFactory
     /**
      * {@inheritdoc}
      */
-    protected function createStateMachine()
+    protected function createStateMachine(): StateMachineInterface
     {
         return $this->container->get($this->key);
     }

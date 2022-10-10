@@ -7,7 +7,7 @@ use Finite\Test\StateMachineTestCase;
 use Symfony\Component\EventDispatcher\EventDispatcher;
 
 /**
- * @author Yohan Giarelli <yohan@frequence-web.fr>
+ * @author Yohan Giarelli <yohan@giarel.li>
  */
 class ListenableStateMachineTest extends StateMachineTestCase
 {
@@ -21,7 +21,7 @@ class ListenableStateMachineTest extends StateMachineTestCase
      */
     protected $dispatcher;
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
